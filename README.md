@@ -1,2 +1,4 @@
-# ios-programming-bnrg
-IOS Programming exercises from Big Nerd Ranch Book
+# IOS Programming Exercises 
+
+Learning Swift and IOS from The Big Nerd Ranch Book. These are my files from following along in the book.
+
