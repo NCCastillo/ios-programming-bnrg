@@ -35,6 +35,26 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        print("ConversionViewController loaded its view")
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        let current_calendar = NSCalendar.currentCalendar()
+        let hour = current_calendar.component(NSCalendarUnit.Hour, fromDate: NSDate())
+        
+        if (hour > 20 || hour < 5) {
+            view.backgroundColor = UIColor.blackColor()
+        } else {
+            view.backgroundColor = UIColor.whiteColor()
+        }
+        
+        print("Current hour is: \(hour)")
+        
+    }
+    
     @IBAction func farenheitFieldChanged(textField: UITextField) {
         if let text = textField.text, value = Double(text) {
             fahrenheitValue = value
