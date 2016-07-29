@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8E190DEF1D4AEBF7000A704E /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E190DEE1D4AEBF7000A704E /* ItemCell.swift */; };
+		8E190DF11D4AFC9E000A704E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E190DF01D4AFC9E000A704E /* DetailViewController.swift */; };
 		8EC6A7BA1D445E0F00ED9C85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC6A7B91D445E0F00ED9C85 /* AppDelegate.swift */; };
 		8EC6A7BF1D445E0F00ED9C85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EC6A7BD1D445E0F00ED9C85 /* Main.storyboard */; };
 		8EC6A7C11D445E0F00ED9C85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EC6A7C01D445E0F00ED9C85 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		8E190DEE1D4AEBF7000A704E /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		8E190DF01D4AFC9E000A704E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8EC6A7B61D445E0F00ED9C85 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC6A7B91D445E0F00ED9C85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EC6A7BE1D445E0F00ED9C85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				8EF0A10C1D44634000190D0D /* Item.swift */,
 				8EF0A10E1D44667D00190D0D /* ItemStore.swift */,
 				8E190DEE1D4AEBF7000A704E /* ItemCell.swift */,
+				8E190DF01D4AFC9E000A704E /* DetailViewController.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				8EC6A7CC1D445EE400ED9C85 /* ItemsViewController.swift in Sources */,
 				8EF0A10D1D44634000190D0D /* Item.swift in Sources */,
 				8EF0A10F1D44667D00190D0D /* ItemStore.swift in Sources */,
+				8E190DF11D4AFC9E000A704E /* DetailViewController.swift in Sources */,
 				8EC6A7BA1D445E0F00ED9C85 /* AppDelegate.swift in Sources */,
 				8E190DEF1D4AEBF7000A704E /* ItemCell.swift in Sources */,
 			);
