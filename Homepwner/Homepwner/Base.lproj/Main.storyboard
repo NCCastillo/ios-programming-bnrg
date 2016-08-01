@@ -88,8 +88,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8gv-8D-xlp">
-                                <rect key="frame" x="20" y="8" width="560" height="584"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8gv-8D-xlp">
+                                <rect key="frame" x="20" y="8" width="560" height="496"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hIc-wb-nRJ">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
@@ -154,8 +154,8 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="249" verticalCompressionResistancePriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAe-UX-dV4">
-                                        <rect key="frame" x="0.0" y="114" width="560" height="470"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="249" verticalCompressionResistancePriority="249" misplaced="YES" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAe-UX-dV4">
+                                        <rect key="frame" x="0.0" y="114" width="560" height="0.0"/>
                                         <gestureRecognizers/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -164,19 +164,45 @@
                                             <outletCollection property="gestureRecognizers" destination="pkJ-dN-ahv" appends="YES" id="weW-8s-gx7"/>
                                         </connections>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="749" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vlg-uD-dSf">
+                                        <rect key="frame" x="0.0" y="122" width="560" height="374"/>
+                                    </imageView>
                                 </subviews>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eEE-XG-gYe">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="bpB-9R-EXQ"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="REl-IB-Bhj">
+                                        <connections>
+                                            <action selector="takePicture:" destination="W37-rA-NqN" id="Qpt-Ek-MeE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8gv-8D-xlp" firstAttribute="centerY" secondItem="DIz-Kk-hib" secondAttribute="centerY" id="MO8-uR-1Wo"/>
+                            <constraint firstItem="JMb-dQ-JXy" firstAttribute="top" secondItem="eEE-XG-gYe" secondAttribute="bottom" id="TsH-5P-Rgi"/>
                             <constraint firstItem="8gv-8D-xlp" firstAttribute="trailing" secondItem="DIz-Kk-hib" secondAttribute="trailingMargin" id="V8M-fJ-ey8"/>
+                            <constraint firstItem="eEE-XG-gYe" firstAttribute="leading" secondItem="DIz-Kk-hib" secondAttribute="leadingMargin" id="VUJ-E2-vWz"/>
                             <constraint firstItem="JMb-dQ-JXy" firstAttribute="top" secondItem="8gv-8D-xlp" secondAttribute="bottom" constant="8" symbolic="YES" id="WG6-N3-GVy"/>
+                            <constraint firstItem="eEE-XG-gYe" firstAttribute="top" secondItem="8gv-8D-xlp" secondAttribute="bottom" constant="8" id="Wmv-Ry-sDY"/>
                             <constraint firstItem="8gv-8D-xlp" firstAttribute="leading" secondItem="DIz-Kk-hib" secondAttribute="leadingMargin" id="bGX-R0-2tU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eEE-XG-gYe" secondAttribute="trailing" id="rEt-55-GMz"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="WG6-N3-GVy"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="VAe-UX-dV4" id="WLg-A5-ZGZ"/>
+                        <outlet property="imageView" destination="Vlg-uD-dSf" id="i80-TU-C1e"/>
                         <outlet property="nameField" destination="uXM-xi-SMB" id="jUF-4H-dTa"/>
                         <outlet property="serialNumberField" destination="XJY-te-sQi" id="os1-Hy-mrR"/>
                         <outlet property="valueField" destination="l8V-VY-Vdv" id="C7c-nI-OSl"/>
